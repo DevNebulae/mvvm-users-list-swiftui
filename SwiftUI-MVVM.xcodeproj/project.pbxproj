@@ -11,6 +11,15 @@
 		924C71CA26CE7D1E00EC7F3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C71C926CE7D1E00EC7F3A /* ContentView.swift */; };
 		924C71CC26CE7D3100EC7F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924C71CB26CE7D3100EC7F3A /* Assets.xcassets */; };
 		924C71CF26CE7D3100EC7F3A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924C71CE26CE7D3100EC7F3A /* Preview Assets.xcassets */; };
+		924C71D826CE7DF800EC7F3A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C71D726CE7DF800EC7F3A /* UserViewModel.swift */; };
+		924C71DF26CE7F5400EC7F3A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C71DE26CE7F5400EC7F3A /* User.swift */; };
+		924C71E326CE9D5000EC7F3A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C71E226CE9D5000EC7F3A /* DetailView.swift */; };
+		924C71E826CE9DBA00EC7F3A /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C71E726CE9DBA00EC7F3A /* UserRow.swift */; };
+		924C71EB26CE9E9600EC7F3A /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C71EA26CE9E9600EC7F3A /* UserResponse.swift */; };
+		924C71EE26CE9ECF00EC7F3A /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C71ED26CE9ECF00EC7F3A /* UserAPI.swift */; };
+		924C71F126CEB46C00EC7F3A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C71F026CEB46C00EC7F3A /* ImageLoader.swift */; };
+		924C71F426CEB51800EC7F3A /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C71F326CEB51800EC7F3A /* AsyncImage.swift */; };
+		924C71F726CEB54200EC7F3A /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C71F626CEB54200EC7F3A /* Avatar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +29,15 @@
 		924C71CB26CE7D3100EC7F3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		924C71CE26CE7D3100EC7F3A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		924C71D026CE7D3100EC7F3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		924C71D726CE7DF800EC7F3A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		924C71DE26CE7F5400EC7F3A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		924C71E226CE9D5000EC7F3A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		924C71E726CE9DBA00EC7F3A /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
+		924C71EA26CE9E9600EC7F3A /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		924C71ED26CE9ECF00EC7F3A /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		924C71F026CEB46C00EC7F3A /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		924C71F326CEB51800EC7F3A /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		924C71F626CEB54200EC7F3A /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +70,15 @@
 		924C71C626CE7D1E00EC7F3A /* SwiftUI-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				924C71DD26CE7F4900EC7F3A /* Model */,
+				924C71DA26CE7E0800EC7F3A /* ViewModel */,
+				924C71E526CE9D5700EC7F3A /* View */,
 				924C71C726CE7D1E00EC7F3A /* SwiftUI_MVVMApp.swift */,
 				924C71C926CE7D1E00EC7F3A /* ContentView.swift */,
 				924C71CB26CE7D3100EC7F3A /* Assets.xcassets */,
 				924C71D026CE7D3100EC7F3A /* Info.plist */,
 				924C71CD26CE7D3100EC7F3A /* Preview Content */,
+				924C71F026CEB46C00EC7F3A /* ImageLoader.swift */,
 			);
 			path = "SwiftUI-MVVM";
 			sourceTree = "<group>";
@@ -67,6 +89,35 @@
 				924C71CE26CE7D3100EC7F3A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		924C71DA26CE7E0800EC7F3A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				924C71D726CE7DF800EC7F3A /* UserViewModel.swift */,
+				924C71ED26CE9ECF00EC7F3A /* UserAPI.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		924C71DD26CE7F4900EC7F3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				924C71DE26CE7F5400EC7F3A /* User.swift */,
+				924C71EA26CE9E9600EC7F3A /* UserResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		924C71E526CE9D5700EC7F3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				924C71F626CEB54200EC7F3A /* Avatar.swift */,
+				924C71F326CEB51800EC7F3A /* AsyncImage.swift */,
+				924C71E226CE9D5000EC7F3A /* DetailView.swift */,
+				924C71E726CE9DBA00EC7F3A /* UserRow.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +189,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924C71F426CEB51800EC7F3A /* AsyncImage.swift in Sources */,
+				924C71DF26CE7F5400EC7F3A /* User.swift in Sources */,
+				924C71EE26CE9ECF00EC7F3A /* UserAPI.swift in Sources */,
 				924C71CA26CE7D1E00EC7F3A /* ContentView.swift in Sources */,
+				924C71D826CE7DF800EC7F3A /* UserViewModel.swift in Sources */,
+				924C71E826CE9DBA00EC7F3A /* UserRow.swift in Sources */,
+				924C71F126CEB46C00EC7F3A /* ImageLoader.swift in Sources */,
+				924C71EB26CE9E9600EC7F3A /* UserResponse.swift in Sources */,
+				924C71F726CEB54200EC7F3A /* Avatar.swift in Sources */,
+				924C71E326CE9D5000EC7F3A /* DetailView.swift in Sources */,
 				924C71C826CE7D1E00EC7F3A /* SwiftUI_MVVMApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

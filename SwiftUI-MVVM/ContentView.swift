@@ -5,12 +5,22 @@
 //  Created by Ivo Huntjens on 19/08/2021.
 //
 
+import Combine
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = UserViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(viewModel.users) { user in
+                NavigationLink(destination: DetailView(user: user)) {
+                    UserRow(user: user)
+                }
+            }.navigationTitle("Users")
+        }.onAppear {
+            viewModel.fetchUsers()
+        }
     }
 }
 
